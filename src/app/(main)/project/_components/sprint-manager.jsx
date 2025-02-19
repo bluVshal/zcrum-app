@@ -41,7 +41,7 @@ const SprintManager = ({ sprint, setSprint, sprints, projectId }) => {
         status: updatedStatus.sprint.status,
       });
     }
-  }, [updateStatus, loading]);
+  }, [updatedStatus, loading]);
 
   const handleSprintChange = (value) => {
     const selectedSprint = sprints.find((s) => s.id === value);

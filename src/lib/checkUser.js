@@ -28,10 +28,10 @@ export const checkUser = async () => {
                 email:user.emailAddresses[0].emailAddress,
             },
         });
-
         return newUser;
     } catch(err) {
-        console.log(err)
+      //  console.log(err)
+      return null;
     }
 }
 
