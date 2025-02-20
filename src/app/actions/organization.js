@@ -1,6 +1,6 @@
 'use server';
 
-import { auth, clerkClient, OrganizationMembership } from "@clerk/nextjs/server";
+import { auth, clerkClient } from "@clerk/nextjs/server";
 import { db } from '@/lib/prisma';
 
 export async function getOrganization(slug) {
@@ -66,7 +66,7 @@ export async function getOrganizationUsers(orgId) {
     const users = await db.user.findMany({
         where: {
             clerkUserId: {
-                id: userIds,
+                in: userIds,
             },
         },
     });
