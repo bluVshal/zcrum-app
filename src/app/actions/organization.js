@@ -70,6 +70,6 @@ export async function getOrganizationUsers(orgId) {
             },
         },
     });
-
+ 
     return users;
 }
